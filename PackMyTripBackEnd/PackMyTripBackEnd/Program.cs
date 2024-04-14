@@ -23,10 +23,14 @@ builder.Services.AddScoped<IEditarServicioCU, EditarServicioCU>();
 builder.Services.AddScoped<IVerPaquetesCU, VerPaquetesCU>();
 builder.Services.AddScoped<IRegistrarPaqueteCU, RegistrarPaqueteCU>();
 builder.Services.AddScoped<IEditarPaquetesCU, EditarPaqueteCU>();
+builder.Services.AddScoped<IVerUsuariosXPaqueteTuristicoCU, VerUsuariosXPaqueteTuristicoCU>();
+builder.Services.AddScoped<IRegistrarUsuarioXPaqueteTuristicoCU, RegistrarUsuarioXPaqueteTuristicoCU>();
+builder.Services.AddScoped<IEditarUsuarioXPaqueteTuristicoCU, EditarUsuarioXPaqueteTuristicoCU>();
 
 //Inyecci�n de dependencias de repositorios
 builder.Services.AddScoped<IServicioRepository>(opt => new ServicioRepository(dataBaseConnectionString)); //Para pasar un par�metro al constructor
 builder.Services.AddScoped<IPaqueteTuristicoRepository>(opt => new PaqueteTuristicoRepository(dataBaseConnectionString));
+builder.Services.AddScoped<IUsuarioXPaqueteTuristicoRepository>(opt => new UsuarioXPaqueteTuristicoRepository(dataBaseConnectionString));
 
 var app = builder.Build();
 
