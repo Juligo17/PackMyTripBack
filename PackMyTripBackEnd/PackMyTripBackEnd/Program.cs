@@ -1,4 +1,5 @@
 using PackMyTripBackEnd.CasosUso.Implementaciones;
+using PackMyTripBackEnd.CasosUso.Implementaciones.Paquetes;
 using PackMyTripBackEnd.CasosUso.Interfaces;
 using PackMyTripBackEnd.Repositories.Implementaciones;
 using PackMyTripBackEnd.Repositories.Interfaces;
@@ -15,13 +16,17 @@ builder.Services.AddSwaggerGen();
 //Obtiene el string para conectarse a la base de datos de heroku
 var dataBaseConnectionString = builder.Configuration.GetConnectionString("DataBaseConnectionString");
 
-//Inyección de dependencias de servicios de casos de uso
-builder.Services.AddScoped<IVerServiciosCU, VerServiciosCU>();  //Crea automaticamente el objeto sin el new a través de la interfaz
+//Inyecciï¿½n de dependencias de servicios de casos de uso
+builder.Services.AddScoped<IVerServiciosCU, VerServiciosCU>();  //Crea automaticamente el objeto sin el new a travï¿½s de la interfaz
 builder.Services.AddScoped<IRegistrarServicioCU, RegistrarServicioCU>();
 builder.Services.AddScoped<IEditarServicioCU, EditarServicioCU>();
+builder.Services.AddScoped<IVerPaquetesCU, VerPaquetesCU>();
+builder.Services.AddScoped<IRegistrarPaqueteCU, RegistrarPaqueteCU>();
+builder.Services.AddScoped<IEditarPaquetesCU, EditarPaqueteCU>();
 
-//Inyección de dependencias de repositorios
-builder.Services.AddScoped<IServicioRepository>(opt => new ServicioRepository(dataBaseConnectionString)); //Para pasar un parámetro al constructor
+//Inyecciï¿½n de dependencias de repositorios
+builder.Services.AddScoped<IServicioRepository>(opt => new ServicioRepository(dataBaseConnectionString)); //Para pasar un parï¿½metro al constructor
+builder.Services.AddScoped<IPaqueteTuristicoRepository>(opt => new PaqueteTuristicoRepository(dataBaseConnectionString));
 
 var app = builder.Build();
 
