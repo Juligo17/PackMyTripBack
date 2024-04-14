@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using PackMyTripBackEnd.CasosUso.Interfaces;
-using PackMyTripBackEnd.CasosUso.Implementaciones;
-using Microsoft.AspNetCore.Http;
 using PackMyTripBackEnd.Entidades;
 
 namespace PackMyTripBackEnd.Controllers
