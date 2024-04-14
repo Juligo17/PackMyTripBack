@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PackMyTripBackEnd")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fbed2dfbb8dbcdc8ef03f898a883cc61890a41ed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27a5ce190fc08ef5cff7aed60931df1be8b1a4e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PackMyTripBackEnd")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PackMyTripBackEnd")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
