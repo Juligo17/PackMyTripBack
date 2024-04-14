@@ -1,5 +1,4 @@
 using PackMyTripBackEnd.CasosUso.Implementaciones;
-using PackMyTripBackEnd.CasosUso.Implementaciones.Paquetes;
 using PackMyTripBackEnd.CasosUso.Interfaces;
 using PackMyTripBackEnd.Repositories.Implementaciones;
 using PackMyTripBackEnd.Repositories.Interfaces;
@@ -14,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Obtiene el string para conectarse a la base de datos de heroku
-var dataBaseConnectionString = builder.Configuration.GetConnectionString("DataBaseConnectionString");
+var dataBaseConnectionString = builder.Configuration.GetConnectionString("DataBaseConnectionString2");
 
 //Inyecci�n de dependencias de servicios de casos de uso
 builder.Services.AddScoped<IVerServiciosCU, VerServiciosCU>();  //Crea automaticamente el objeto sin el new a trav�s de la interfaz

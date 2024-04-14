@@ -22,7 +22,7 @@ namespace PackMyTripBackEnd.Controllers
             this.editarUsuarioXPaqueteTuristicoCU = editarUsuarioXPaqueteTuristicoCU;
         }
 
-        [HttpGet] //Indica que es un GET
+        [HttpGet("{usuario}")]  //Indica que es un GET
         public IActionResult getUsuariosXPaqueteTuristico(string? correoUsuario)
         {
             try

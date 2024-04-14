@@ -6,7 +6,13 @@ namespace PackMyTripBackEnd.CasosUso.Implementaciones
 {
     public class VerPaquetesCU : IVerPaquetesCU
     {
-        IPaqueteTuristicoRepository paqueteTuristicoRepository = null!;
+        private readonly IPaqueteTuristicoRepository paqueteTuristicoRepository;
+
+        public VerPaquetesCU(IPaqueteTuristicoRepository paqueteTuristicoRepository)
+        {
+            this.paqueteTuristicoRepository = paqueteTuristicoRepository;
+        }
+        
         public List<PaqueteTuristico> verPaquetesTuristicos()
         {
             List<PaqueteTuristico> paquetes = paqueteTuristicoRepository.getPaquetesTuristicos();

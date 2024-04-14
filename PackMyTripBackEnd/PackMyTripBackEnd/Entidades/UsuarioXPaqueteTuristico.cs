@@ -8,6 +8,6 @@ namespace PackMyTripBackEnd.Entidades
         public int calificacion { get; set; }
         public string? comentarios { get; set; }
         public byte[]? comprobante { get; set; }
-        
+
     }
 }

@@ -33,7 +33,7 @@ namespace PackMyTripBackEnd.Controllers
             }
         }
 
-        [HttpGet] //Indica que es un GET
+        [HttpGet("{correoUsuario1}/{correoUsuario2}")]
         public IActionResult getMensajesEntreUsuarios(string? correoUsuario1, string? correoUsuario2)
         {
             try
@@ -47,7 +47,7 @@ namespace PackMyTripBackEnd.Controllers
             }
         }
 
-        [HttpGet] //Indica que es un GET
+        [HttpGet("{correoUsuario1}/{correoUsuario2}")]
         public IActionResult getMensajesEnviadosPorUsuarioEntreDos(string? correoUsuario1, string? correoUsuario2)
         {
             try
