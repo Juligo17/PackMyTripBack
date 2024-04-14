@@ -2,7 +2,7 @@ using PackMyTripBackEnd.CasosUso.Interfaces;
 using PackMyTripBackEnd.Entidades;
 using PackMyTripBackEnd.Repositories.Interfaces;
 
-namespace PackMyTripBackEnd.CasosUso.Implementaciones.Paquetes
+namespace PackMyTripBackEnd.CasosUso.Implementaciones
 {
     public class EditarPaqueteCU : IEditarPaquetesCU
     {
