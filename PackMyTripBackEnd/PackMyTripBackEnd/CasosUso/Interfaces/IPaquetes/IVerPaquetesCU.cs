@@ -2,7 +2,7 @@ using PackMyTripBackEnd.Entidades;
 
 namespace PackMyTripBackEnd.CasosUso.Interfaces
 {
-    public interface IVerPaquetesTuristicosCU
+    public interface IVerPaquetesCU
     {
         public List<PaqueteTuristico> verPaquetesTuristicos();
         public PaqueteTuristico verPaqueteTuristico(int id);

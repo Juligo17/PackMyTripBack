@@ -4,7 +4,7 @@ using PackMyTripBackEnd.Repositories.Interfaces;
 
 namespace PackMyTripBackEnd.CasosUso.Implementaciones
 {
-    public class VerPaquetesCU : IVerPaquetesTuristicosCU
+    public class VerPaquetesCU : IVerPaquetesCU
     {
         IPaqueteTuristicoRepository paqueteTuristicoRepository = null!;
         public List<PaqueteTuristico> verPaquetesTuristicos()
