@@ -6,7 +6,12 @@ namespace PackMyTripBackEnd.CasosUso.Implementaciones
 {
     public class VerUsuariosXPaqueteTuristicoCU : IVerUsuariosXPaqueteTuristicoCU
     {
-        IUsuarioXPaqueteTuristicoRepository usuarioXPaqueteTuristicoRepository = null!;
+        private readonly IUsuarioXPaqueteTuristicoRepository usuarioXPaqueteTuristicoRepository;
+
+        public VerUsuariosXPaqueteTuristicoCU(IUsuarioXPaqueteTuristicoRepository usuarioXPaqueteTuristicoRepository)
+        {
+            this.usuarioXPaqueteTuristicoRepository = usuarioXPaqueteTuristicoRepository;
+        }
 
         public List<UsuarioXPaqueteTuristico> verUsuariosXPaqueteTuristicoPorCorreo(string? correoUsuario)
         {

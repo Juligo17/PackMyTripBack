@@ -6,7 +6,7 @@ namespace PackMyTripBackEnd.CasosUso.Implementaciones
 {
     public class VerMensajesCU : IVerMensajesCU
     {
-        IMensajeRepository mensajeRepository = null!;
+        private readonly IMensajeRepository mensajeRepository;
         public VerMensajesCU(IMensajeRepository mensajeRepository)
         {
             this.mensajeRepository = mensajeRepository;
