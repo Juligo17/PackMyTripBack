@@ -10,5 +10,6 @@
         public float longitud { get; set; }
         public string? region { get; set; }
         public char tipo { get; set; }
+        public byte[]? fotoPerfil { get; set; }
     }
 }

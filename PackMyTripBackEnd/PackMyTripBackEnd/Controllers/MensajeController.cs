@@ -33,7 +33,7 @@ namespace PackMyTripBackEnd.Controllers
             }
         }
 
-        [HttpGet("{correoUsuario1}/{correoUsuario2}")]
+        [HttpGet("/me/{correoUsuario1}/{correoUsuario2}")]
         public IActionResult getMensajesEntreUsuarios(string? correoUsuario1, string? correoUsuario2)
         {
             try

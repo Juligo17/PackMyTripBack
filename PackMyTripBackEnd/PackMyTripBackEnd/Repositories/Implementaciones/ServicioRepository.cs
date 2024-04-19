@@ -29,7 +29,6 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
 
         public bool insertServicio(Servicio servicio)
         {
-            List<Servicio> servicios = new List<Servicio>();
             using (var connection = new MySqlConnection(connectionString))
             {
                 string sql = @$"INSERT INTO Servicio (nombre, precio, limiteDiario, caracteristicas,

@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //Obtiene el string para conectarse a la base de datos de heroku
-var dataBaseConnectionString = builder.Configuration.GetConnectionString("DataBaseConnectionString2");
+var dataBaseConnectionString = builder.Configuration.GetConnectionString("DataBaseConnectionString");
 
 //Inyecci�n de dependencias de servicios de casos de uso
 builder.Services.AddScoped<IVerServiciosCU, VerServiciosCU>();  //Crea automaticamente el objeto sin el new a trav�s de la interfaz
@@ -30,6 +30,9 @@ builder.Services.AddScoped<IRegistrarMensajeCU, RegistrarMensajeCU>();
 builder.Services.AddScoped<IVerPaqueteTuristicoXServicioCU, VerPaqueteTuristicoXServicioCU>();
 builder.Services.AddScoped<IRegistrarPaqueteTuristicoXServicioCU, RegistrarPaqueteTuristicoXServicioCU>();
 builder.Services.AddScoped<IEditarPaqueteTuristicoXServicioCU, EditarPaqueteTuristicoXServicioCU>();
+builder.Services.AddScoped<ICrearPerfilesCU, CrearPerfilesCU>();
+builder.Services.AddScoped<ISeleccionarRegionCU, SeleccionarRegionCU>();
+builder.Services.AddScoped<IEditarUsuarioCU, EditarUsuarioCU>();
 
 //Inyecci�n de dependencias de repositorios
 builder.Services.AddScoped<IServicioRepository>(opt => new ServicioRepository(dataBaseConnectionString)); //Para pasar un par�metro al constructor
@@ -37,6 +40,7 @@ builder.Services.AddScoped<IPaqueteTuristicoRepository>(opt => new PaqueteTurist
 builder.Services.AddScoped<IUsuarioXPaqueteTuristicoRepository>(opt => new UsuarioXPaqueteTuristicoRepository(dataBaseConnectionString));
 builder.Services.AddScoped<IMensajeRepository>(opt => new MensajeRepository(dataBaseConnectionString));
 builder.Services.AddScoped<IPaqueteTuristicoXServicioRepository>(opt => new PaqueteTuristicoXServicioRepository(dataBaseConnectionString));
+builder.Services.AddScoped<IUsuarioRepository>(opt => new UsuarioRepository(dataBaseConnectionString));
 
 var app = builder.Build();
 
