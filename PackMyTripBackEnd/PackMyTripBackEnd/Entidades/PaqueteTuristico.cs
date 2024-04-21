@@ -8,7 +8,7 @@ namespace PackMyTripBackEnd.Entidades
         public string? nombre { get; set; }
         public DateTime fechaHora { get; set; }
         public float? precioDolares { get; set; }
-        public byte[]? imagen { get; set; }
+        public string? imagen { get; set; }
         public string? correoIntermediario { get; set; }
     }
 }
