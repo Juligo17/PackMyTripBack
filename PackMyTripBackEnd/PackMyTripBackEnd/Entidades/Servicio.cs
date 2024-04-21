@@ -9,8 +9,7 @@ namespace PackMyTripBackEnd.Entidades
         public float precio { get; set; }
         public int limiteDiario { get; set; }
         public string? caracteristicas { get; set; }
-        [MaxLength] //Indica que acepta cualquier tamaño    
-        public byte[]? portada { get; set; }
+        public string? portada { get; set; }
         public DateTime fechaHora { get; set; }
         public string? correoOperador { get; set; }
     }

@@ -2,6 +2,7 @@
 using PackMyTripBackEnd.Repositories.Interfaces;
 using Dapper;
 using MySql.Data.MySqlClient;
+using System.Text;
 
 namespace PackMyTripBackEnd.Repositories.Implementaciones
 {
@@ -31,12 +32,13 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
         {
             using (var connection = new MySqlConnection(connectionString))
             {
+                var portada = Encoding.UTF8.GetBytes(servicio.portada!);
                 string sql = @$"INSERT INTO Servicio (nombre, precio, limiteDiario, caracteristicas,
                     portada, fechaHora, correoOperador) VALUES (@Nombre,@Precio, 
                     @LimiteDiario, @Caracteristicas, @DatosBlob,
                     @FechaHora, @CorreoOperador)";
                 int filasAfectadas = connection.Execute(sql, new { Nombre = servicio.nombre,
-                    DatosBlob = servicio.portada, Precio = servicio.precio, LimiteDiario = servicio.limiteDiario,
+                    DatosBlob = portada, Precio = servicio.precio, LimiteDiario = servicio.limiteDiario,
                     Caracteristicas = servicio.caracteristicas, FechaHora = servicio.fechaHora, 
                     CorreoOperador = servicio.correoOperador
                 }); //Default puesto a que este si puede retornar nulo first primer registro
