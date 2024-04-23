@@ -33,6 +33,7 @@ builder.Services.AddScoped<IEditarPaqueteTuristicoXServicioCU, EditarPaqueteTuri
 builder.Services.AddScoped<ICrearPerfilesCU, CrearPerfilesCU>();
 builder.Services.AddScoped<ISeleccionarRegionCU, SeleccionarRegionCU>();
 builder.Services.AddScoped<IEditarUsuarioCU, EditarUsuarioCU>();
+builder.Services.AddScoped<IVerMetricasCU, VerMetricasCU>();
 
 //Inyecci�n de dependencias de repositorios
 builder.Services.AddScoped<IServicioRepository>(opt => new ServicioRepository(dataBaseConnectionString)); //Para pasar un par�metro al constructor
