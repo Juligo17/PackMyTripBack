@@ -25,7 +25,7 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build PackMyTripBackEnd --no restore -c Release 
+        run: dotnet build PackMyTripBackEnd -c Release 
 
       - name: dotnet publish
         run: dotnet publish PackMyTripBackEnd --configuration Release --no-build -output ${{ env.AZURE_WEB_APP_PACKAGE_PATH }}
