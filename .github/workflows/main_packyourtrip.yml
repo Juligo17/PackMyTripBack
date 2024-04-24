@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 env:
   AZURE_WEBAPP_NAME: PackYourTrip
-  AZURE_WEB_APP_PACKAGE_PATH: \"./\"
+  AZURE_WEB_APP_PACKAGE_PATH: '.'
 jobs:
   build:
     runs-on: ubuntu-latest
