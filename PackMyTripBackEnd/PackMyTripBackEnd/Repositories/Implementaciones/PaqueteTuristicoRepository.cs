@@ -53,19 +53,34 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             return paqueteTuristico;
         }
 
+        public List<Servicio> getServiciosPaquete(int id)
+        {
+            List<Servicio> servicios = new List<Servicio>();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                string sql = $"SELECT S.* FROM Servicio S " +
+                             $"INNER JOIN PaqueteTuristicoXServicio PS ON S.id = PS.idServicio " +
+                             $"WHERE PS.idPaquete = @IdPaquete";
+
+                IEnumerable<Servicio> serviciosObtenidos = connection.Query<Servicio>(sql, new { IdPaquete = id });
+                servicios = serviciosObtenidos.ToList();
+            }
+            return servicios;
+        }
+
         public bool insertPaqueteTuristico(PaqueteTuristico paqueteTuristico)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
-                string sql = @$"INSERT INTO PaqueteTuristico (nombre, fechaHora, precioDolares, correoIntermediario, imagen) 
-                    VALUES (@Nombre, @FechaHora, @PrecioDolares, @CorreoIntermediario, @Imagen)";
+                string sql = @$"INSERT INTO PaqueteTuristico (nombre, fechaHora, precioDolares, imagen) 
+                    VALUES (@Nombre, @FechaHora, @PrecioDolares, @Imagen, @CorreoIntermediario)";
                 int filasAfectadas = connection.Execute(sql, new
                 {
                     Nombre = paqueteTuristico.nombre,
                     FechaHora = paqueteTuristico.fechaHora,
                     PrecioDolares = paqueteTuristico.precioDolares,
-                    CorreoIntermediario = paqueteTuristico.correoIntermediario,
-                    Imagen = paqueteTuristico.imagen
+                    Imagen = paqueteTuristico.imagen,
+                    CorreoIntermediario = paqueteTuristico.correoIntermediario
                 }); //Default puesto a que este si puede retornar nulo first primer registro
                 if (filasAfectadas == 1)
                 {
@@ -80,17 +95,17 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             using (var connection = new MySqlConnection(connectionString))
             {
                 string sql = $"UPDATE PaqueteTuristico SET nombre = @Nombre, " +
-                    $"fechaHora = @FechaHora, precioDolares = @PrecioDolares, correoIntermediario = @CorreoIntermediario, imagen = @Imagen " +
+                    $"fechaHora = @FechaHora, precioDolares = @PrecioDolares, imagen = @Imagen , correoIntermediario + @CorreoIntermediario" +
                     $"WHERE id = @Id";
                 int filasAfectadas = connection.Execute(sql, new
                 {
                     Nombre = paqueteTuristico.nombre,
                     FechaHora = paqueteTuristico.fechaHora,
                     PrecioDolares = paqueteTuristico.precioDolares,
-                    CorreoIntermediario = paqueteTuristico.correoIntermediario,
                     Imagen = paqueteTuristico.imagen,
-                    Id = paqueteTuristico.id
-                });
+                    Id = paqueteTuristico.id,
+                    CorreoIntermediario = paqueteTuristico.correoIntermediario
+                }) ;
                 if (filasAfectadas == 1)
                 {
                     return true;
