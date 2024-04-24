@@ -22,7 +22,7 @@ namespace PackMyTripBackEnd.Controllers
             this.editarPaqueteTuristicoCU = editarPaqueteTuristicoCU;
         }
 
-        [HttpGet("{intermediario}")] // Get con parametro del correo del intermediario
+        [HttpGet("Lista")] // Get con parametro del correo del intermediario
         public IActionResult getPaquetesTuristicos(string? correoIntermediario)
         {
             try
