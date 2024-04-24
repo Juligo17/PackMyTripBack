@@ -43,15 +43,12 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
         {
             using (var connection = new MySqlConnection(connectionString))
             {
-                string sql = @$"INSERT INTO UsuarioXPaqueteTuristico (correoUsuario, idPaquete, calificacion, comentarios, comprobante) 
-                VALUES (@CorreoUsuario, @IdPaquete, @Calificacion, @Comentarios, @Comprobante)";
+                string sql = @$"INSERT INTO UsuarioXPaqueteTuristico (correoUsuario, idPaquete) 
+                VALUES (@CorreoUsuario, @IdPaquete)";
                 int filasAfectadas = connection.Execute(sql, new
                 {
                     CorreoUsuario = usuarioXPaqueteTuristico.correoUsuario,
-                    IdPaquete = usuarioXPaqueteTuristico.idPaquete,
-                    Calificacion = usuarioXPaqueteTuristico.calificacion,
-                    Comentarios = usuarioXPaqueteTuristico.comentarios,
-                    Comprobante = usuarioXPaqueteTuristico.comprobante
+                    IdPaquete = usuarioXPaqueteTuristico.idPaquete
                 });
                 if (filasAfectadas == 1)
                 {
@@ -65,15 +62,12 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
         {
             using (var connection = new MySqlConnection(connectionString))
             {
-                string sql = @$"UPDATE UsuarioXPaqueteTuristico SET correoUsuario = @CorreoUsuario, idPaquete = @IdPaquete, calificacion = @Calificacion, comentarios = @Comentarios, comprobante = @Comprobante WHERE id = @Id";
+                string sql = @$"UPDATE UsuarioXPaqueteTuristico SET correoUsuario = @CorreoUsuario, idPaquete = @IdPaquete WHERE id = @Id";
                 int filasAfectadas = connection.Execute(sql, new
                 {
                     Id = usuarioXPaqueteTuristico.id,
                     CorreoUsuario = usuarioXPaqueteTuristico.correoUsuario,
-                    IdPaquete = usuarioXPaqueteTuristico.idPaquete,
-                    Calificacion = usuarioXPaqueteTuristico.calificacion,
-                    Comentarios = usuarioXPaqueteTuristico.comentarios,
-                    Comprobante = usuarioXPaqueteTuristico.comprobante
+                    IdPaquete = usuarioXPaqueteTuristico.idPaquete
                 });
                 if (filasAfectadas == 1)
                 {

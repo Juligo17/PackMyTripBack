@@ -19,7 +19,6 @@ namespace PackMyTripBackEnd.Controllers
             this.crearPerfilesCU = crearPerfilesCU;
             this.seleccionarRegionCU = seleccionarRegionCU;
             this.editarUsuarioCU = editarUsuarioCU;
-
         }
 
         [HttpGet] //Indica que es un GET

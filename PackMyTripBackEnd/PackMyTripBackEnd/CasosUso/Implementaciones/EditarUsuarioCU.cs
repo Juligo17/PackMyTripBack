@@ -20,7 +20,7 @@ namespace PackMyTripBackEnd.CasosUso.Implementaciones
             {
                 return true;
             }
-            throw new ApplicationException("No se pudo actualiza el usuario");
+            throw new ApplicationException("No se pudo actualizar el usuario");
         }
     }
 }
