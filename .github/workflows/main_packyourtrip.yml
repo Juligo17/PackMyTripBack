@@ -8,50 +8,36 @@ on:
     branches:
       - main
   workflow_dispatch:
-
+env:
+  AZURE_WEBAPP_NAME: PackYourTrip
+  AZURE_WEB_APP_PACKAGE_PATH: './published'
+  NET_CORE_VERSION: '6.0.x'
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'
-          include-prerelease: true
+          dotnet-version: ${{ env.NET_CORE_VERSION}}
+          
+      - name: Restore
+        run: dotnet restore
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build --no restore -c Release 
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
-
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v3
-        with:
-          name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'Production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v3
-        with:
-          name: .net-app
-      
+        run: dotnet publish --configuration Release --no-build -output ${{ env.AZURE_WEB_APP_PACKAGE_PATH }}
+     
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'PackYourTrip'
-          slot-name: 'Production'
-          package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_32CF4370AA8E4F0B8CC58C79F7EA2D08 }}
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          package: ${{ env.AZURE_WEB_APP_PACKAGE_PATH }}
+
+      
