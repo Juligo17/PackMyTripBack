@@ -4,13 +4,17 @@ namespace PackMyTripBackEnd.Entidades
 {
     public class Servicio
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public string? nombre { get; set; } //El ? indica que acepta valores NULL
-        public float precio { get; set; }
-        public int limiteDiario { get; set; }
+        public float? precio { get; set; }
+        public int? limiteDiario { get; set; }
         public string? caracteristicas { get; set; }
         public string? portada { get; set; }
-        public DateTime fechaHora { get; set; }
+        public DateTime? fechaHora { get; set; }
         public string? correoOperador { get; set; }
+        public float tasaOcupacion { get; set; }
+        public TimeSpan? horasPromedio { get; set; }
+        public float ingresos { get; set; }
+        public float indiceRepeticion { get; set; }
     }
 }

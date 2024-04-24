@@ -14,13 +14,15 @@ namespace PackMyTripBackEnd.Controllers
         private IVerServiciosCU verServiciosCU = null!;
         private IRegistrarServicioCU registrarServicioCU = null!;
         private IEditarServicioCU editarServicioCU = null!;
+        private IVerMetricasCU verMetricasCU = null!;
 
         public ServicioController(IVerServiciosCU verServiciosCU, IRegistrarServicioCU registrarServicioCU, 
-                                  IEditarServicioCU editarServicioCU)
+                                  IEditarServicioCU editarServicioCU, IVerMetricasCU verMetricasCU)
         {
             this.verServiciosCU = verServiciosCU;
             this.registrarServicioCU = registrarServicioCU;
             this.editarServicioCU = editarServicioCU;
+            this.verMetricasCU = verMetricasCU;
         }
 
         [HttpGet] //Indica que es un GET
@@ -29,6 +31,20 @@ namespace PackMyTripBackEnd.Controllers
             try
             {
                 var resultado = verServiciosCU.getServicios(correoOperador);
+                return Ok(resultado);
+            }
+            catch (ApplicationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("metricas")] //Indica que es un GET
+        public IActionResult getServiciosMetricas(string? correoOperador)
+        {
+            try
+            {
+                var resultado = verMetricasCU.obtenerMetricas(correoOperador);
                 return Ok(resultado);
             }
             catch (ApplicationException ex)
