@@ -25,10 +25,10 @@ jobs:
           include-prerelease: true
 
       - name: Build with dotnet
-        run: dotnet build PackMyTripBackEnd/PackMyTripBackEnd --no restore -c Release 
+        run: dotnet build PackMyTripBackEnd --no restore -c Release 
 
       - name: dotnet publish
-        run: dotnet publish PackMyTripBackEnd/PackMyTripBackEnd --configuration Release --no-build -output ${{ env.AZURE_WEB_APP_PACKAGE_PATH }}
+        run: dotnet publish PackMyTripBackEnd --configuration Release --no-build -output ${{ env.AZURE_WEB_APP_PACKAGE_PATH }}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
