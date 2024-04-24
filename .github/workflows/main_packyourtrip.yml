@@ -54,4 +54,4 @@ jobs:
           app-name: 'PackYourTrip'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_89BAA2A179744211898AA4CC4D3AD398 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_32CF4370AA8E4F0B8CC58C79F7EA2D08 }}
