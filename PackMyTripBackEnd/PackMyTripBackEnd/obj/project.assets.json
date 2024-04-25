@@ -2092,11 +2092,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
+      "projectUniqueName": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
       "projectName": "PackMyTripBackEnd",
-      "projectPath": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
+      "projectPath": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
       "packagesPath": "C:\\Users\\julig\\.nuget\\packages\\",
-      "outputPath": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\obj\\",
+      "outputPath": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\julig\\AppData\\Roaming\\NuGet\\NuGet.Config",
