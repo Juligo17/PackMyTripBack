@@ -14,9 +14,9 @@ namespace PackMyTripBackEnd.CasosUso.Implementaciones
             this.usuarioRepository = usuarioRepository;
         }
 
-        public List<PaqueteTuristico> getPaquetesTuristicosUsuario(string? correoTurista)
+        public List<PaqueteTuristico> getPaquetesTuristicosUsuario(string? correoUsuario)
         {
-            List<PaqueteTuristico> paquetes = usuarioRepository.getPaquetesTuristicosUsuario(correoTurista);
+            List<PaqueteTuristico> paquetes = usuarioRepository.getPaquetesTuristicosUsuario(correoUsuario);
 
             if (paquetes.Count > 0)
             {

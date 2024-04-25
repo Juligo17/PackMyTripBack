@@ -4,6 +4,6 @@ namespace PackMyTripBackEnd.CasosUso.Interfaces
 {
     public interface IEditarComentarioCalificacionesCU
     {
-        bool actualizarComentarioCalificaciones(int idPaquete, string? correoUsuario, string? comentarios, int? calificacion);
+        public bool actualizarComentarioCalificaciones(int idPaquete, string correoUsuario, string comentarios, int calificacion);
     }
 }

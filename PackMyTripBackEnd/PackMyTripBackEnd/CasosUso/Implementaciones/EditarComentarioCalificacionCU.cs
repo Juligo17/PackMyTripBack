@@ -13,7 +13,7 @@ namespace PackMyTripBackEnd.CasosUso.Implementaciones
             this.usuarioRepository = usuarioRepository;
         }
 
-        public bool actualizarComentarioCalificaciones(int idPaquete, string? correoUsuario, string? comentarios, int? calificacion)
+        public bool actualizarComentarioCalificaciones(int idPaquete, string correoUsuario, string comentarios, int calificacion)
         {
             if (usuarioRepository.actualizarComentariosCalificacion(idPaquete, correoUsuario, comentarios, calificacion))
             {
