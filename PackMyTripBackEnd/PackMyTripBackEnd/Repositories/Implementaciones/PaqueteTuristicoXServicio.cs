@@ -49,7 +49,7 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                 {
                     IdPaquete = paqueteTuristicoXServicio.idPaquete,
                     IdServicio = paqueteTuristicoXServicio.idServicio,
-                    //TiempoEstancia = paqueteTuristicoXServicio.tiempoEstancia
+                    TiempoEstancia = paqueteTuristicoXServicio.tiempoEstancia
                 });
                 if (filasAfectadas == 1)
                 {
@@ -66,7 +66,7 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                 string sql = @$"UPDATE PaqueteTuristicoXServicio SET tiempoEstancia = @TiempoEstancia, idPaquete = @IdPaquete, idServicio = @IdServicio  WHERE id = @Id";
                 int filasAfectadas = connection.Execute(sql, new
                 {
-                    //TiempoEstancia = paqueteTuristicoXServicio.tiempoEstancia,
+                    TiempoEstancia = paqueteTuristicoXServicio.tiempoEstancia,
                     Id = paqueteTuristicoXServicio.id,
                     IdPaquete = paqueteTuristicoXServicio.idPaquete,
                     IdServicio = paqueteTuristicoXServicio.idServicio

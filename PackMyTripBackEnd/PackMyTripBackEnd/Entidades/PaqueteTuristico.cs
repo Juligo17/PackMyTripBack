@@ -10,9 +10,5 @@ namespace PackMyTripBackEnd.Entidades
         public float? precioDolares { get; set; }
         public string? imagen { get; set; }
         public string? correoIntermediario { get; set; }
-        public List<Servicio>? listaServicios { get; set; }
-        public int? calificacion { get; set; }
-        public string? comentarios { get; set; }
-        public string? comprobante { get; set; }
     }
 }
