@@ -14,15 +14,15 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             this.connectionString = connectionString;
         }
 
-        public Usuario getUsuario(string usuario, string contrasenha)
+        public Usuario getUsuario(string correo, string contrasenha)
         {
             Usuario? usuarioRtn = new Usuario();
             using (var connection = new MySqlConnection(connectionString))
             {
-                string sql = $"SELECT  *,  DATE_FORMAT(fechaNacimiento, '%Y-%m-%d') AS fechaNacimiento FROM Usuario WHERE usuario = @Usuario AND " +
+                string sql = $"SELECT  *,  DATE_FORMAT(fechaNacimiento, '%Y-%m-%d') AS fechaNacimiento FROM Usuario WHERE correo = @Correo AND " +
                     $"Contrasenha = @contrasenha";
                 var resultado = connection.Query(sql,
-                    new { Usuario = usuario, Contrasenha = contrasenha }).FirstOrDefault();
+                    new { Correo = correo, Contrasenha = contrasenha }).FirstOrDefault();
                 if(resultado != null)
                 {
                     var fechaNacimientoStr = resultado.fechaNacimiento.ToString("yyyy-MM-dd");
