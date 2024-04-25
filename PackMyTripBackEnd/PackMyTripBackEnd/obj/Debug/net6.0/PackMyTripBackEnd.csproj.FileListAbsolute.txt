@@ -116,4 +116,4 @@ E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net
 E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.pdb
 E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.genruntimeconfig.cache
 E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\ref\PackMyTripBackEnd.dll
-E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTr.66E78EA1.Up2Date
+E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.csproj.CopyComplete

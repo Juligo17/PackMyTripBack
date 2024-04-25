@@ -33,9 +33,6 @@ builder.Services.AddScoped<IEditarPaqueteTuristicoXServicioCU, EditarPaqueteTuri
 builder.Services.AddScoped<ICrearPerfilesCU, CrearPerfilesCU>();
 builder.Services.AddScoped<ISeleccionarRegionCU, SeleccionarRegionCU>();
 builder.Services.AddScoped<IEditarUsuarioCU, EditarUsuarioCU>();
-builder.Services.AddScoped<IGetPaquetesUsuarioCU, GetPaquetesUsuarioCU>();
-builder.Services.AddScoped<IGetServiciosPaqueteCU, GetServiciosPaqueteCU>();
-builder.Services.AddScoped<IEditarComentarioCalificacionesCU, EditarComentarioCalificacionCU>();
 builder.Services.AddScoped<IVerMetricasCU, VerMetricasCU>();
 
 //Inyecci�n de dependencias de repositorios
