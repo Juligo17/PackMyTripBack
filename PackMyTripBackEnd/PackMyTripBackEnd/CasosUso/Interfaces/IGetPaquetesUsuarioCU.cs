@@ -4,6 +4,6 @@ namespace PackMyTripBackEnd.CasosUso.Interfaces
 {
     public interface IGetPaquetesUsuarioCU
     {
-        public List<PaqueteTuristico> getPaquetesTuristicosUsuario(string? correoTurista);
+        public List<PaqueteTuristico> getPaquetesTuristicosUsuario(string? correoUsuario);
     }
 }

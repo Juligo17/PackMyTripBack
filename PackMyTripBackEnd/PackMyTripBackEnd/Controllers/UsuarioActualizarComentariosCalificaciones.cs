@@ -17,7 +17,7 @@ namespace PackMyTripBackEnd.Controllers
             this.editarComentarioCalificacionesCU = editarComentarioCalificacionesCU;
         }
 
-        [HttpPut("{idPaquete}/{correoUsuario}/{comentarios}/{calificacion}")]
+        [HttpPut()]
         public IActionResult editarComentariosCalificacion(int idPaquete, string? correoUsuario, string? comentarios, int calificacion)
         {
             try

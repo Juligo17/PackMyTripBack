@@ -44,12 +44,11 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             using (var connection = new MySqlConnection(connectionString))
             {
                 string sql = @$"INSERT INTO PaqueteTuristicoXServicio (idPaquete, idServicio, tiempoEstancia) 
-                VALUES (@IdPaquete, @IdServicio, @TiempoEstancia)";
+                VALUES (@IdPaquete, @IdServicio)";
                 int filasAfectadas = connection.Execute(sql, new
                 {
                     IdPaquete = paqueteTuristicoXServicio.idPaquete,
                     IdServicio = paqueteTuristicoXServicio.idServicio,
-                    TiempoEstancia = paqueteTuristicoXServicio.tiempoEstancia
                 });
                 if (filasAfectadas == 1)
                 {
@@ -63,10 +62,9 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
         {
             using (var connection = new MySqlConnection(connectionString))
             {
-                string sql = @$"UPDATE PaqueteTuristicoXServicio SET tiempoEstancia = @TiempoEstancia, idPaquete = @IdPaquete, idServicio = @IdServicio  WHERE id = @Id";
+                string sql = @$"UPDATE PaqueteTuristicoXServicio SET idPaquete = @IdPaquete, idServicio = @IdServicio  WHERE id = @Id";
                 int filasAfectadas = connection.Execute(sql, new
                 {
-                    TiempoEstancia = paqueteTuristicoXServicio.tiempoEstancia,
                     Id = paqueteTuristicoXServicio.id,
                     IdPaquete = paqueteTuristicoXServicio.idPaquete,
                     IdServicio = paqueteTuristicoXServicio.idServicio
