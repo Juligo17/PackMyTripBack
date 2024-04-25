@@ -36,7 +36,9 @@ builder.Services.AddScoped<IEditarUsuarioCU, EditarUsuarioCU>();
 builder.Services.AddScoped<IGetPaquetesUsuarioCU, GetPaquetesUsuarioCU>();
 builder.Services.AddScoped<IGetServiciosPaqueteCU, GetServiciosPaqueteCU>();
 builder.Services.AddScoped<IEditarComentarioCalificacionesCU, EditarComentarioCalificacionCU>();
+builder.Services.AddScoped<IVerAllServiciosCU, VerAllServiciosCU>();
 builder.Services.AddScoped<IVerMetricasCU, VerMetricasCU>();
+builder.Services.AddScoped<ICrearPaqueteCU, CrearPaqueteCU>();
 
 //Inyecci�n de dependencias de repositorios
 builder.Services.AddScoped<IServicioRepository>(opt => new ServicioRepository(dataBaseConnectionString)); //Para pasar un par�metro al constructor

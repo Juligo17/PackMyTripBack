@@ -2087,19 +2087,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\julig\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Proyectos GH\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
+      "projectUniqueName": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
       "projectName": "PackMyTripBackEnd",
-      "projectPath": "E:\\Proyectos GH\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\Proyectos GH\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\obj\\",
+      "projectPath": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
+      "packagesPath": "C:\\Users\\julig\\.nuget\\packages\\",
+      "outputPath": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\julig\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2166,7 +2166,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.421\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

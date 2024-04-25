@@ -30,6 +30,18 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             return servicios;
         }
 
+        public List<Servicio> getAllServicios()
+        {
+            List<Servicio> servicios = new List<Servicio>() ;
+            using (var connection = new MySqlConnection(connectionString)) 
+            {
+                string sql = $"SELECT * FROM Servicio";
+                IEnumerable<Servicio> serviciosObtenidos = connection.Query<Servicio>(sql);
+                servicios = serviciosObtenidos.ToList() ;
+            }
+            return servicios;
+        }
+
 
         public bool insertServicio(Servicio servicio)
         {
@@ -151,5 +163,7 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                     GROUP BY Servicio.id
                     ORDER BY Servicio.id ASC";
         }
+
+        
     }
 }
