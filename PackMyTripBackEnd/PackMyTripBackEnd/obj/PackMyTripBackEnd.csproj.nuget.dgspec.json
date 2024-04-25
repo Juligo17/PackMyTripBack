@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj": {}
+    "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj": {}
   },
   "projects": {
-    "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj": {
+    "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
+        "projectUniqueName": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
         "projectName": "PackMyTripBackEnd",
-        "projectPath": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
+        "projectPath": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
         "packagesPath": "C:\\Users\\julig\\.nuget\\packages\\",
-        "outputPath": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBackEnd\\PackMyTripBackEnd\\obj\\",
+        "outputPath": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julig\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1Trd2Mh3AMbMrGyKrCm/UiCOfa57clp6nUHHA1yDcWv7jN43KVdCIJ9NvrmHgtdQE956C21tWepDQNnUA2lSwA==",
+  "dgSpecHash": "eWMFMB3ogbRBs6qxWkdA84qjlRaqCVbvUOXJSAPIuf87wJetY/RBeXUf8vfi6/qr/LrCrYvm2k1DMWQPoRsORQ==",
   "success": true,
-  "projectFilePath": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
+  "projectFilePath": "I:\\Mi unidad\\Universidad\\Semestre 5\\Proyecto de innovacion\\Hackaton\\Back End\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\PackMyTripBackEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julig\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\julig\\.nuget\\packages\\dapper\\2.1.44\\dapper.2.1.44.nupkg.sha512",

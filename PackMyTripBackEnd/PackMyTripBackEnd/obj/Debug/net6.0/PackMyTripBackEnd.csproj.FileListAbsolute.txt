@@ -117,3 +117,14 @@ E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net
 E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.genruntimeconfig.cache
 E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\ref\PackMyTripBackEnd.dll
 E:\Proyectos GH\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.csproj.CopyComplete
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.csproj.AssemblyReference.cache
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.GeneratedMSBuildEditorConfig.editorconfig
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.AssemblyInfoInputs.cache
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.AssemblyInfo.cs
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.csproj.CoreCompileInputs.cache
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.MvcApplicationPartsAssemblyInfo.cs
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.MvcApplicationPartsAssemblyInfo.cache
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.sourcelink.json
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.dll
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\refint\PackMyTripBackEnd.dll
+I:\Mi unidad\Universidad\Semestre 5\Proyecto de innovacion\Hackaton\Back End\PackMyTripBack\PackMyTripBackEnd\PackMyTripBackEnd\obj\Debug\net6.0\PackMyTripBackEnd.pdb
