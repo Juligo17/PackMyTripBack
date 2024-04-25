@@ -15,14 +15,16 @@ namespace PackMyTripBackEnd.Controllers
         private IRegistrarServicioCU registrarServicioCU = null!;
         private IEditarServicioCU editarServicioCU = null!;
         private IVerMetricasCU verMetricasCU = null!;
+        private ICrearPaqueteCU crearPaqueteCU = null!;
 
         public ServicioController(IVerServiciosCU verServiciosCU, IRegistrarServicioCU registrarServicioCU, 
-                                  IEditarServicioCU editarServicioCU, IVerMetricasCU verMetricasCU)
+                                  IEditarServicioCU editarServicioCU, IVerMetricasCU verMetricasCU, ICrearPaqueteCU crearPaqueteCU)
         {
             this.verServiciosCU = verServiciosCU;
             this.registrarServicioCU = registrarServicioCU;
             this.editarServicioCU = editarServicioCU;
             this.verMetricasCU = verMetricasCU;
+            this.crearPaqueteCU = crearPaqueteCU;
         }
 
         [HttpGet] //Indica que es un GET

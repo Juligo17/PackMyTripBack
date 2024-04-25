@@ -16,7 +16,7 @@ namespace PackMyTripBackEnd.Controllers
             this.getPaquetesTuristaCU = getPaquetesTuristaCU;
         }
 
-        [HttpGet("{correoUsuario}")]
+        [HttpGet]
         public IActionResult getPaquetesTurista(string? correoUsuario)
         {
             try
