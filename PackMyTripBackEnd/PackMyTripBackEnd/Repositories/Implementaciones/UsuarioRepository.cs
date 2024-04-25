@@ -40,7 +40,49 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             }
         }
 
-        public bool crearUsuario(Usuario usuario)
+    public List<PaqueteTuristico> getPaquetesTuristicosUsuario(string? correoUsuario)
+    {
+        List<PaqueteTuristico> paquetesTuristicos = new List<PaqueteTuristico>();
+        using (var connection = new MySqlConnection(connectionString))
+        {
+            string sql = @"
+        SELECT 
+            PT.*, 
+            S.* 
+        FROM 
+            PaqueteTuristico PT
+            INNER JOIN UsuarioXPaqueteTuristico UP ON PT.id = UP.idPaquete
+            INNER JOIN PaqueteTuristicoXServicio PS ON PT.id = PS.idPaquete
+            INNER JOIN Servicio S ON PS.idServicio = S.id
+        WHERE 
+            UP.correoUsuario = @CorreoUsuario";
+
+            var paquetesDictionary = new Dictionary<int, PaqueteTuristico>();
+            connection.Query<PaqueteTuristico, Servicio, PaqueteTuristico>(sql,
+                (paquete, servicio) =>
+                {
+                    PaqueteTuristico paqueteEntry;
+                    if (!paquetesDictionary.TryGetValue(paquete.id, out paqueteEntry))
+                    {
+                        paqueteEntry = paquete;
+                        paqueteEntry.listaServicios = new List<Servicio>();
+                        paquetesDictionary.Add(paqueteEntry.id, paqueteEntry);
+                    }
+                    paqueteEntry.listaServicios.Add(servicio);
+                    return paqueteEntry;
+                },
+                new { CorreoUsuario = correoUsuario },
+                splitOn: "id");
+
+            paquetesTuristicos = paquetesDictionary.Values.ToList();
+        }
+        return paquetesTuristicos;
+    }
+
+
+   
+
+    public bool crearUsuario(Usuario usuario)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -114,5 +156,20 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             }
             return false;
         }
+
+        public bool actualizarComentariosCalificacion(int idPaquete, string correoUsuario, string comentarios, int calificacion)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                string sql = @"UPDATE UsuarioXPaqueteTuristico
+                       SET comentarios = @Comentarios, calificacion = @Calificacion
+                       WHERE idPaquete = @IdPaquete AND correoUsuario = @CorreoUsuario";
+
+                int rowsAffected = connection.Execute(sql, new { Comentarios = comentarios, Calificacion = calificacion, IdPaquete = idPaquete, CorreoUsuario = correoUsuario });
+
+                return rowsAffected > 0;
+            }
+        }
+
     }
 }

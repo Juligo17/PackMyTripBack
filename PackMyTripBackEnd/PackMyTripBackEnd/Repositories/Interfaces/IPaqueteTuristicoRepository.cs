@@ -9,5 +9,6 @@ namespace PackMyTripBackEnd.Repositories.Interfaces
         public List<PaqueteTuristico> getPaquetesTuristicosPorIntermediario(string? correoIntermediario);
         public bool insertPaqueteTuristico(PaqueteTuristico paqueteTuristico);
         public bool updatePaqueteTuristico(PaqueteTuristico paqueteTuristico);
+        public List<Servicio> getServiciosPaquete(int idPaquete);
     }
 }

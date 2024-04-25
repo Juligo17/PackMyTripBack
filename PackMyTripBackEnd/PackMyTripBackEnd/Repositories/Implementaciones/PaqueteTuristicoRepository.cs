@@ -40,6 +40,22 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             return paquetesTuristicos;
         }
 
+        public List<Servicio> getServiciosPaquete(int idPaquete)
+        {
+            List<Servicio> serviciosObtenidos = new List<Servicio>();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                string sql = @"SELECT S.*
+                       FROM Servicio S
+                       INNER JOIN PaqueteTuristicoXServicio PS ON S.id = PS.idServicio
+                       WHERE PS.idPaquete = @IdPaquete";
+
+                serviciosObtenidos = connection.Query<Servicio>(sql, new { IdPaquete = idPaquete }).ToList();
+            }
+            return serviciosObtenidos;
+        }
+
+
         public PaqueteTuristico getPaqueteTuristico(int id)
         {
             PaqueteTuristico paqueteTuristico = new PaqueteTuristico();
