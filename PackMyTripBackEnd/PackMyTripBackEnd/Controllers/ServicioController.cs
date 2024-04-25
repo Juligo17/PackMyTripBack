@@ -9,7 +9,7 @@ namespace PackMyTripBackEnd.Controllers
     [ApiController]
     [Produces("application/json")] //Decimos que este controlador produce un formato .json
     [Route("api/[controller]")] //Define la URL que va a tener el controlador (en este caso api/controller)
-    public class ServicioController : ControllerBase
+    public class ServicioController : Controller
     {
         private IVerServiciosCU verServiciosCU = null!;
         private IRegistrarServicioCU registrarServicioCU = null!;

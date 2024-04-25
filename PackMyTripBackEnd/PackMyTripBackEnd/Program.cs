@@ -36,6 +36,7 @@ builder.Services.AddScoped<IEditarUsuarioCU, EditarUsuarioCU>();
 builder.Services.AddScoped<IGetPaquetesUsuarioCU, GetPaquetesUsuarioCU>();
 builder.Services.AddScoped<IGetServiciosPaqueteCU, GetServiciosPaqueteCU>();
 builder.Services.AddScoped<IEditarComentarioCalificacionesCU, EditarComentarioCalificacionCU>();
+builder.Services.AddScoped<IVerAllServiciosCU, VerAllServiciosCU>();
 builder.Services.AddScoped<IVerMetricasCU, VerMetricasCU>();
 
 //Inyecci�n de dependencias de repositorios
