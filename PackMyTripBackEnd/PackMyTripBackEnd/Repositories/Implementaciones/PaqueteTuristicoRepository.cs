@@ -27,18 +27,36 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             return paquetesTuristicos;
         }
 
-        public List<PaqueteTuristico> getPaquetesTuristicosPorIntermediario(string? correoIntermediario)
+        public List<PaqueteTuristico> getPaquetesTuristicosPorIntermediario(string correoIntermediario)
         {
             List<PaqueteTuristico> paquetesTuristicos = new List<PaqueteTuristico>();
-            using (var connection = new MySqlConnection(connectionString))
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                string sql = $"SELECT * FROM PaqueteTuristico WHERE correoIntermediario = @CorreoIntermediario";
-                IEnumerable<PaqueteTuristico> paquetesTuristicosObtenidos = connection.Query<PaqueteTuristico>(sql,
-                    new { CorreoIntermediario = correoIntermediario }); //Hace el query
-                paquetesTuristicos = paquetesTuristicosObtenidos.ToList();
+                string sql = @"SELECT PT.*, S.*
+               FROM PaqueteTuristico PT
+               INNER JOIN PaqueteTuristicoXServicio PS ON PT.id = PS.idPaquete
+               INNER JOIN Servicio S ON PS.idServicio = S.id
+               WHERE PT.correoIntermediario = @CorreoIntermediario";
+
+
+                var lookup = new Dictionary<int, PaqueteTuristico>();
+                connection.Query<PaqueteTuristico, Servicio, PaqueteTuristico>(sql, (paquete, servicio) =>
+                {
+                    if (!lookup.TryGetValue(paquete.id, out var paqueteEntry))
+                    {
+                        lookup.Add(paquete.id, paqueteEntry = paquete);
+                        paqueteEntry.listaServicios = new List<Servicio>();
+                    }
+                    paqueteEntry.listaServicios.Add(servicio);
+                    return paqueteEntry;
+                }, new { CorreoIntermediario = correoIntermediario }, splitOn: "id");
+
+                paquetesTuristicos = lookup.Values.ToList();
             }
             return paquetesTuristicos;
         }
+
+
 
         public PaqueteTuristico getPaqueteTuristico(int id)
         {
