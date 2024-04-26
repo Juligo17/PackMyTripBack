@@ -68,7 +68,7 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                         paqueteEntry.listaServicios = new List<Servicio>();
                         paquetesDictionary.Add(paqueteEntry.id, paqueteEntry);
                     }
-                    paqueteEntry.lis.Add(servicio);
+                    paqueteEntry.listaServicios.Add(servicio);
                     return paqueteEntry;
                 },
                 new { CorreoUsuario = correoUsuario },
@@ -87,10 +87,10 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             using (var connection = new MySqlConnection(connectionString))
             {
                 //string fechaConFormato = usuario.fechaNacimiento.ToString("yyyy-MM-dd");
-                string sql = @$"INSERT INTO Usuario (correo, usuario, contrasenha, fechaNacimiento,
-                    latitud, longitud, region, tipo, fotoPerfil) VALUES (@Correo, @Usuario, 
-                    @Contrasenha, @FechaNacimiento, @Latitud,
-                    @Longitud, @Region, @Tipo, @FotoPerfil)";
+                string sql = $"INSERT INTO Usuario (correo, usuario, contrasenha, fechaNacimiento, " +
+                    $"latitud, longitud, region, tipo, fotoPerfil) VALUES (@Correo, @Usuario, " +
+                    $"@Contrasenha, @FechaNacimiento, @Latitud, " +
+                    $"@Longitud, @Region, @Tipo, @FotoPerfil)";
                 int filasAfectadas = connection.Execute(sql, new
                 {
                     Correo = usuario.correo,
@@ -103,6 +103,26 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                     Tipo = usuario.tipo,
                     FotoPerfil = usuario.fotoPerfil
                 }); //Default puesto a que este si puede retornar nulo first primer registro
+                if (filasAfectadas == 1)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool registrarPaqueteUsuario(string? correoUsuario, int idPaquete)
+        {
+            using (var connection = new MySqlConnection(
+                connectionString))
+            {
+                string sql = "INSERT INTO UsuarioXPaqueteTuristico(correoUsuario, idPaquete) VALUES (@CorreoUsuario, @IDPaquete)";
+                int filasAfectadas = connection.Execute(sql,
+                    new
+                    {
+                        CorreoUsuario = correoUsuario,
+                        IDPaquete = idPaquete
+                    });
                 if (filasAfectadas == 1)
                 {
                     return true;

@@ -10,6 +10,7 @@ namespace PackMyTripBackEnd.Repositories.Interfaces
         bool actualizarUsuario(Usuario usuario);
         List<PaqueteTuristico> getPaquetesTuristicosUsuario(string correoUsuario);
         bool actualizarComentariosCalificacion(int idPaquete, string correoUsuario, string comentarios, int calificacion);
+        bool registrarPaqueteUsuario(string? correoUsuario, int idPaquete);
 
     }
 }
