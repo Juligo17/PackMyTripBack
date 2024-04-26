@@ -5,7 +5,7 @@
         public string? correo { get; set; }
         public string? usuario { get; set; }
         public string? contrasenha { get; set; }
-        public DateOnly fechaNacimiento { get; set; }
+        public string? fechaNacimiento { get; set; }
         public float? latitud { get; set; }
         public float? longitud { get; set; }
         public string? region { get; set; }
