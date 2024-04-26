@@ -8,10 +8,12 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
     public class PaqueteTuristicoRepository : IPaqueteTuristicoRepository
     {
         private string connectionString = null!;
+        private PaqueteTuristicoXServicioRepository paqueteTuristicoXServicioRepository;
 
-        public PaqueteTuristicoRepository(string connectionString)
+        public PaqueteTuristicoRepository(string connectionString, PaqueteTuristicoXServicioRepository paqueteTuristicoXServicioRepository)
         {
             this.connectionString = connectionString;
+            this.paqueteTuristicoXServicioRepository = paqueteTuristicoXServicioRepository;
         }
 
 
@@ -74,8 +76,9 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             using (var connection = new MySqlConnection(connectionString))
             {
                 string sql = @$"INSERT INTO PaqueteTuristico (nombre, fechaHora, precioDolares, correoIntermediario, imagen) 
-                    VALUES (@Nombre, @FechaHora, @PrecioDolares, @CorreoIntermediario, @Imagen)";
-                int filasAfectadas = connection.Execute(sql, new
+                    VALUES (@Nombre, @FechaHora, @PrecioDolares, @CorreoIntermediario, @Imagen);
+                    SELECT LAST_INSERT_ID();";
+                int idGenerado = connection.QuerySingle<int>(sql, new
                 {
                     Nombre = paqueteTuristico.nombre,
                     FechaHora = paqueteTuristico.fechaHora,
@@ -83,8 +86,21 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                     CorreoIntermediario = paqueteTuristico.correoIntermediario,
                     Imagen = paqueteTuristico.imagen
                 }); //Default puesto a que este si puede retornar nulo first primer registro
-                if (filasAfectadas == 1)
+                if (idGenerado != 0)
                 {
+                    var servicios = paqueteTuristico.listaServicios;
+                    if(servicios == null)
+                    {
+                        return false;
+                    }
+                    foreach (var servicio in servicios)
+                    {
+                        PaqueteTuristicoXServicio paqueteTuristicoXServicio = new PaqueteTuristicoXServicio ();
+                        paqueteTuristicoXServicio.id = 0;
+                        paqueteTuristicoXServicio.idPaquete = idGenerado;
+                        paqueteTuristicoXServicio.idServicio = servicio.id;
+                        paqueteTuristicoXServicioRepository.insertPaqueteTuristicoXServicio(paqueteTuristicoXServicio);
+                    }
                     return true;
                 }
             }
@@ -109,6 +125,24 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                 });
                 if (filasAfectadas == 1)
                 {
+                    var servicios = paqueteTuristico.listaServicios;
+                    if (servicios == null)
+                    {
+                        return false;
+                    }
+                    List<PaqueteTuristicoXServicio> paqueteTuristicoXServicios = paqueteTuristicoXServicioRepository.getPaquetesTuristicosXServicioPorPaquete(paqueteTuristico.id);
+                    foreach (var paqueteTuristicoXServicio in paqueteTuristicoXServicios)
+                    {
+                        paqueteTuristicoXServicioRepository.deletePaqueteTuristicoXServicio(paqueteTuristicoXServicio.id);
+                    }
+                    foreach (var servicio in servicios)
+                    {
+                        PaqueteTuristicoXServicio paqueteTuristicoXServicio = new PaqueteTuristicoXServicio();
+                        paqueteTuristicoXServicio.id = 0;
+                        paqueteTuristicoXServicio.idPaquete = paqueteTuristico.id;
+                        paqueteTuristicoXServicio.idServicio = servicio.id;
+                        paqueteTuristicoXServicioRepository.insertPaqueteTuristicoXServicio(paqueteTuristicoXServicio);
+                    }
                     return true;
                 }
             }

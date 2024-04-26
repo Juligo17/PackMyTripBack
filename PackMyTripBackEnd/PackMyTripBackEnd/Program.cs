@@ -43,7 +43,7 @@ builder.Services.AddScoped<IRegistrarPaqueteUsuarioCU, RegistrarPaqueteUsuarioCU
 
 //Inyecci�n de dependencias de repositorios
 builder.Services.AddScoped<IServicioRepository>(opt => new ServicioRepository(dataBaseConnectionString)); //Para pasar un par�metro al constructor
-builder.Services.AddScoped<IPaqueteTuristicoRepository>(opt => new PaqueteTuristicoRepository(dataBaseConnectionString));
+builder.Services.AddScoped<IPaqueteTuristicoRepository>(opt => new PaqueteTuristicoRepository(dataBaseConnectionString, new PaqueteTuristicoXServicioRepository(dataBaseConnectionString)));
 builder.Services.AddScoped<IUsuarioXPaqueteTuristicoRepository>(opt => new UsuarioXPaqueteTuristicoRepository(dataBaseConnectionString));
 builder.Services.AddScoped<IMensajeRepository>(opt => new MensajeRepository(dataBaseConnectionString));
 builder.Services.AddScoped<IPaqueteTuristicoXServicioRepository>(opt => new PaqueteTuristicoXServicioRepository(dataBaseConnectionString));
