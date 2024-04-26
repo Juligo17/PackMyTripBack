@@ -8,10 +8,12 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
     public class PaqueteTuristicoXServicioRepository : IPaqueteTuristicoXServicioRepository
     {
         private string connectionString = null!;
+        private IServicioRepository servicioRepository;
 
-        public PaqueteTuristicoXServicioRepository(string connectionString)
+        public PaqueteTuristicoXServicioRepository(string connectionString, IServicioRepository servicioRepository)
         {
             this.connectionString = connectionString;
+            this.servicioRepository = servicioRepository;
         }
         public List<PaqueteTuristicoXServicio> getPaquetesTuristicosXServicioPorPaquete(int idPaquete)
         {
@@ -24,6 +26,24 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                 paquetesTuristicosXServicio = paquetesTuristicosXServicioObtenidos.ToList();
             }
             return paquetesTuristicosXServicio;
+        }
+
+        public List<Servicio> getServiciosPorPaquete(int idPaquete)
+        {
+            List<PaqueteTuristicoXServicio> paquetesTuristicosXServicio = new List<PaqueteTuristicoXServicio>();
+            List<Servicio> servicios = new List<Servicio>();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                string sql = $"SELECT * FROM PaqueteTuristicoXServicio WHERE idPaquete = @IdPaquete";
+                IEnumerable<PaqueteTuristicoXServicio> paquetesTuristicosXServicioObtenidos = connection.Query<PaqueteTuristicoXServicio>(sql,
+                    new { IdPaquete = idPaquete }); //Hace el query
+                foreach(var paqueteXServ in paquetesTuristicosXServicioObtenidos.ToList())
+                {
+                    servicios.Add(servicioRepository.getServicio(paqueteXServ.idServicio));
+                }
+                paquetesTuristicosXServicio = paquetesTuristicosXServicioObtenidos.ToList();
+            }
+            return servicios;
         }
 
         public PaqueteTuristicoXServicio getPaqueteTuristicoXServicio(int id)
@@ -43,13 +63,14 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
         {
             using (var connection = new MySqlConnection(connectionString))
             {
-                string sql = @$"INSERT INTO PaqueteTuristicoXServicio (idPaquete, idServicio) 
-                VALUES (@IdPaquete, @IdServicio)";
+                string sql = @$"INSERT INTO PaqueteTuristicoXServicio (idPaquete, idServicio, tiempoEstancia) 
+                VALUES (@IdPaquete, @IdServicio, @TiempoEstancia)";
                 int filasAfectadas = connection.Execute(sql, new
                 {
                     IdPaquete = paqueteTuristicoXServicio.idPaquete,
-                    IdServicio = paqueteTuristicoXServicio.idServicio
-                });
+                    IdServicio = paqueteTuristicoXServicio.idServicio,
+                    TiempoEstancia = paqueteTuristicoXServicio.tiempoEstancia
+                }); ;
                 if (filasAfectadas == 1)
                 {
                     return true;

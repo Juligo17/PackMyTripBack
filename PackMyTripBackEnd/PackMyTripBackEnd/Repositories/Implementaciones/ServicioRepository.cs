@@ -30,6 +30,18 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             return servicios;
         }
 
+        public Servicio getServicio(int? id)
+        {
+            Servicio? servicio = new Servicio();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                string sql = $"SELECT * FROM Servicio WHERE id = @Id";
+                servicio = connection.QueryFirstOrDefault<Servicio>(sql,
+                    new { Id = id }); //Hace el query
+            }
+            return servicio;
+        }
+
         public List<Servicio> getAllServicios()
         {
             List<Servicio> servicios = new List<Servicio>() ;

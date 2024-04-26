@@ -9,5 +9,6 @@ namespace PackMyTripBackEnd.Repositories.Interfaces
         public bool updateServicio(Servicio servicio);
         public List<Servicio> getServiciosMetricas(string? correoOperador);
         public List<Servicio> getAllServicios();
+        public Servicio getServicio(int? id);
     }
 }

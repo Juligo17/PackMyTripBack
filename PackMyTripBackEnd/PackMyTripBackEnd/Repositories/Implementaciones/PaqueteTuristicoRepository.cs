@@ -25,6 +25,11 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                 string sql = $"SELECT * FROM PaqueteTuristico";
                 IEnumerable<PaqueteTuristico> paquetesTuristicosObtenidos = connection.Query<PaqueteTuristico>(sql); //Hace el query
                 paquetesTuristicos = paquetesTuristicosObtenidos.ToList();
+                foreach (var paquete in paquetesTuristicosObtenidos)
+                {
+                    List<Servicio> servicios = paqueteTuristicoXServicioRepository.getServiciosPorPaquete(paquete.id);
+                    paquete.listaServicios = servicios;
+                }
             }
             return paquetesTuristicos;
         }
@@ -37,6 +42,11 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                 string sql = $"SELECT * FROM PaqueteTuristico WHERE correoIntermediario = @CorreoIntermediario";
                 IEnumerable<PaqueteTuristico> paquetesTuristicosObtenidos = connection.Query<PaqueteTuristico>(sql,
                     new { CorreoIntermediario = correoIntermediario }); //Hace el query
+                foreach(var paquete in paquetesTuristicosObtenidos)
+                {
+                    List<Servicio> servicios = paqueteTuristicoXServicioRepository.getServiciosPorPaquete(paquete.id);
+                    paquete.listaServicios = servicios;
+                }
                 paquetesTuristicos = paquetesTuristicosObtenidos.ToList();
             }
             return paquetesTuristicos;

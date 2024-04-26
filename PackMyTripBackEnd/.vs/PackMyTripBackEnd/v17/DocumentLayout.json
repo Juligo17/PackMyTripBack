@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|d:\\repo back packmytrip\\packmytripback\\packmytripbackend\\packmytripbackend\\repositories\\implementaciones\\paqueteturisticorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\repositories\\implementaciones\\paqueteturisticorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|d:\\repo back packmytrip\\packmytripback\\packmytripbackend\\packmytripbackend\\repositories\\implementaciones\\paqueteturisticoxservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\repositories\\implementaciones\\paqueteturisticoxservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,12 +11,24 @@
       "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\entidades\\paqueteturisticoxservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|d:\\repo back packmytrip\\packmytripback\\packmytripbackend\\packmytripbackend\\casosuso\\implementaciones\\paquetes\\verpaquetescu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\casosuso\\implementaciones\\paquetes\\verpaquetescu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|d:\\repo back packmytrip\\packmytripback\\packmytripbackend\\packmytripbackend\\repositories\\implementaciones\\serviciorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\repositories\\implementaciones\\serviciorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|d:\\repo back packmytrip\\packmytripback\\packmytripbackend\\packmytripbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|d:\\repo back packmytrip\\packmytripback\\packmytripbackend\\packmytripbackend\\controllers\\paqueteturisticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\controllers\\paqueteturisticocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|d:\\repo back packmytrip\\packmytripback\\packmytripbackend\\packmytripbackend\\repositories\\implementaciones\\paqueteturisticorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\repositories\\implementaciones\\paqueteturisticorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|d:\\repo back packmytrip\\packmytripback\\packmytripbackend\\packmytripbackend\\repositories\\interfaces\\iserviciorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65C9E4E9-2AD3-480A-803D-2BC84FEB544F}|PackMyTripBackEnd\\PackMyTripBackEnd.csproj|solutionrelative:packmytripbackend\\repositories\\interfaces\\iserviciorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,67 +66,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PaqueteTuristicoXServicio.cs",
-              "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoXServicio.cs",
-              "RelativeDocumentMoniker": "PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoXServicio.cs",
-              "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoXServicio.cs",
-              "RelativeToolTip": "PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoXServicio.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAmwFUAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T18:16:48.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Program.cs",
               "RelativeDocumentMoniker": "PackMyTripBackEnd\\Program.cs",
               "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Program.cs",
               "RelativeToolTip": "PackMyTripBackEnd\\Program.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAWwC0AAAC4AAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAWwDAAAAC9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T18:10:21.372Z",
+              "WhenOpened": "2024-04-26T21:02:46.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "IServicioRepository.cs",
+              "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Interfaces\\IServicioRepository.cs",
+              "RelativeDocumentMoniker": "PackMyTripBackEnd\\Repositories\\Interfaces\\IServicioRepository.cs",
+              "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Interfaces\\IServicioRepository.cs",
+              "RelativeToolTip": "PackMyTripBackEnd\\Repositories\\Interfaces\\IServicioRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T20:56:04.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServicioRepository.cs",
+              "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Implementaciones\\ServicioRepository.cs",
+              "RelativeDocumentMoniker": "PackMyTripBackEnd\\Repositories\\Implementaciones\\ServicioRepository.cs",
+              "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Implementaciones\\ServicioRepository.cs",
+              "RelativeToolTip": "PackMyTripBackEnd\\Repositories\\Implementaciones\\ServicioRepository.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAmwCAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T20:53:52.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PaqueteTuristicoXServicio.cs",
               "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Entidades\\PaqueteTuristicoXServicio.cs",
               "RelativeDocumentMoniker": "PackMyTripBackEnd\\Entidades\\PaqueteTuristicoXServicio.cs",
               "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Entidades\\PaqueteTuristicoXServicio.cs",
               "RelativeToolTip": "PackMyTripBackEnd\\Entidades\\PaqueteTuristicoXServicio.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T18:05:12.421Z",
+              "WhenOpened": "2024-04-26T20:48:10.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VerPaquetesCU.cs",
+              "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\CasosUso\\Implementaciones\\Paquetes\\VerPaquetesCU.cs",
+              "RelativeDocumentMoniker": "PackMyTripBackEnd\\CasosUso\\Implementaciones\\Paquetes\\VerPaquetesCU.cs",
+              "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\CasosUso\\Implementaciones\\Paquetes\\VerPaquetesCU.cs",
+              "RelativeToolTip": "PackMyTripBackEnd\\CasosUso\\Implementaciones\\Paquetes\\VerPaquetesCU.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T20:42:44.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PaqueteTuristicoXServicio.cs",
+              "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoXServicio.cs",
+              "RelativeDocumentMoniker": "PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoXServicio.cs",
+              "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoXServicio.cs",
+              "RelativeToolTip": "PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoXServicio.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAuwCkAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T20:46:02.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PaqueteTuristicoRepository.cs",
               "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoRepository.cs",
               "RelativeDocumentMoniker": "PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoRepository.cs",
               "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoRepository.cs",
               "RelativeToolTip": "PackMyTripBackEnd\\Repositories\\Implementaciones\\PaqueteTuristicoRepository.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAAwI0AAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T17:51:34.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PaqueteTuristicoController.cs",
-              "DocumentMoniker": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Controllers\\PaqueteTuristicoController.cs",
-              "RelativeDocumentMoniker": "PackMyTripBackEnd\\Controllers\\PaqueteTuristicoController.cs",
-              "ToolTip": "D:\\Repo Back PackMyTrip\\PackMyTripBack\\PackMyTripBackEnd\\PackMyTripBackEnd\\Controllers\\PaqueteTuristicoController.cs",
-              "RelativeToolTip": "PackMyTripBackEnd\\Controllers\\PaqueteTuristicoController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T17:51:22.761Z",
               "EditorCaption": ""
             }
           ]
