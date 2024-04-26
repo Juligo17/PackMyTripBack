@@ -39,6 +39,7 @@ builder.Services.AddScoped<IEditarComentarioCalificacionesCU, EditarComentarioCa
 builder.Services.AddScoped<IVerAllServiciosCU, VerAllServiciosCU>();
 builder.Services.AddScoped<IVerMetricasCU, VerMetricasCU>();
 builder.Services.AddScoped<ICrearPaqueteCU, CrearPaqueteCU>();
+builder.Services.AddScoped<IRegistrarPaqueteUsuarioCU, RegistrarPaqueteUsuarioCU>();
 
 //Inyecci�n de dependencias de repositorios
 builder.Services.AddScoped<IServicioRepository>(opt => new ServicioRepository(dataBaseConnectionString)); //Para pasar un par�metro al constructor
