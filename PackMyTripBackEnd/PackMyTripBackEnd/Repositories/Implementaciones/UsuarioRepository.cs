@@ -25,11 +25,11 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                     new { Correo = correo, Contrasenha = contrasenha }).FirstOrDefault();
                 if(resultado != null)
                 {
-                    var fechaNacimientoStr = resultado.fechaNacimiento.ToString("yyyy-MM-dd");
+                    var fechaNacimiento = resultado.fechaNacimiento.ToString("yyyy-MM-dd");
                     usuarioRtn.correo = resultado.correo;
                     usuarioRtn.usuario = resultado.usuario;
                     usuarioRtn.contrasenha = resultado.contrasenha;
-                    usuarioRtn.fechaNacimiento = DateOnly.Parse(fechaNacimientoStr);
+                    usuarioRtn.fechaNacimiento = fechaNacimiento;
                     usuarioRtn.latitud = resultado.latitud;
                     usuarioRtn.longitud = resultado.longitud;
                     usuarioRtn.region = resultado.region;
