@@ -68,7 +68,7 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                         paqueteEntry.listaServicios = new List<Servicio>();
                         paquetesDictionary.Add(paqueteEntry.id, paqueteEntry);
                     }
-                    paqueteEntry.listaServicios.Add(servicio);
+                    paqueteEntry.lis.Add(servicio);
                     return paqueteEntry;
                 },
                 new { CorreoUsuario = correoUsuario },
@@ -86,7 +86,7 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
         {
             using (var connection = new MySqlConnection(connectionString))
             {
-                string fechaConFormato = usuario.fechaNacimiento.ToString("yyyy-MM-dd");
+                //string fechaConFormato = usuario.fechaNacimiento.ToString("yyyy-MM-dd");
                 string sql = @$"INSERT INTO Usuario (correo, usuario, contrasenha, fechaNacimiento,
                     latitud, longitud, region, tipo, fotoPerfil) VALUES (@Correo, @Usuario, 
                     @Contrasenha, @FechaNacimiento, @Latitud,
@@ -96,7 +96,7 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
                     Correo = usuario.correo,
                     Usuario = usuario.usuario,
                     Contrasenha = usuario.contrasenha,
-                    FechaNacimiento = fechaConFormato,
+                    FechaNacimiento = usuario.fechaNacimiento,
                     Latitud = usuario.latitud,
                     Longitud = usuario.longitud,
                     Region = usuario.region,
