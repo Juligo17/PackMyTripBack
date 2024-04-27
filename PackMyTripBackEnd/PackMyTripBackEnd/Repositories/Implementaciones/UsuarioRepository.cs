@@ -40,7 +40,24 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
             }
         }
 
-    public List<PaqueteTuristico> getPaquetesTuristicosUsuario(string? correoUsuario)
+        public List<PaqueteTuristico> getPaquetesAgenda(string? correoIntermediario)
+        {
+            List<PaqueteTuristico> paquetesTuristicos = new List<PaqueteTuristico>();
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                string sql = @"SELECT PT.* FROM PaqueteTuristico PT INNER JOIN UsuarioXPaqueteTuristico UP ON PT.id = UP.idPaquete WHERE PT.correoIntermediario = @CorreoUsuario";
+
+                IEnumerable<PaqueteTuristico> paquetesObtenidos = connection.Query<PaqueteTuristico>(sql, new
+                {
+                    CorreoUsuario = correoIntermediario
+                });
+                paquetesTuristicos = paquetesObtenidos.ToList();
+
+            }
+            return paquetesTuristicos;
+        }
+
+        public List<PaqueteTuristico> getPaquetesTuristicosUsuario(string? correoUsuario)
     {
         List<PaqueteTuristico> paquetesTuristicos = new List<PaqueteTuristico>();
         using (var connection = new MySqlConnection(connectionString))
@@ -80,9 +97,13 @@ namespace PackMyTripBackEnd.Repositories.Implementaciones
     }
 
 
-   
+        
 
-    public bool crearUsuario(Usuario usuario)
+
+
+
+
+        public bool crearUsuario(Usuario usuario)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
