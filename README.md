@@ -22,4 +22,7 @@ _Herramientas utilizadas para crear el proyecto_
 
 
 * .NET 6.0
-* [Android Kotlin Front](https://github.com/juanfra312003/pack-my-trip)
+* Dapper
+* MySQL
+* Json
+* [Kotlin Android FrontEnd](https://github.com/juanfra312003/pack-my-trip)
