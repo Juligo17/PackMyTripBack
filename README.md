@@ -7,7 +7,7 @@ _BackEnd de una Aplicación innovadora fácil, ágil y sencilla para entusiastas
 _Software requerido:_
 
 ```
-* TODO
+* SDK Microsoft.NET.Sdk.Web
 ```
 
 ## Versión 📌
