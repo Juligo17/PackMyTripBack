@@ -21,8 +21,8 @@ _Software requerido:_
 _Herramientas utilizadas para crear el proyecto_
 
 
-* .NET 6.0
-* Dapper
-* MySQL
-* Json
+* .NET 6.2.3
+* Dapper 2.1.44
+* MySQL 8.3.0
+* Json 13.0.3
 * [Kotlin Android FrontEnd](https://github.com/juanfra312003/pack-my-trip)
