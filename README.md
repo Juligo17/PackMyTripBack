@@ -28,5 +28,5 @@ _Herramientas utilizadas para crear el proyecto_
 
 
 ## Desarrollado por: 💻
+* [Édgar Julián González Sierra](https://github.com/Juligo17)
 * [Juan Francisco Ramírez](https://github.com/juanfra312003)
-* [Julián González](https://github.com/Juligo17)
